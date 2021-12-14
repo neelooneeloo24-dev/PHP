@@ -1,0 +1,109 @@
+
+4. laragon (server) web interface----
+	server: ON
+	php:Apache: ON
+	mysql: ON
+	Make the request using browser, for http://localhost:<apache-port>
+	http://localhost:786
+	or
+	Quick open using cmd
+	window+R
+	type cmd, HIt enter
+	start chrome.exe http://localhost:786
+	
+How many ways you can execute the php code
+1. php cli mode
+	1. laragon terminal
+	2. git-bash
+	3. cmd/powershell
+	4. php interactive mode---> php REPL ---->php>
+	How to launch php repl mode
+	cmd:>
+	type php -a(flag)
+	php> without using opening and closing of php tags,but ; is mendatory.
+	
+	Wap a program in php interactive
+	php -a
+	php > echo 'neeloo';
+	neeloo
+	php > echo strtoupper('neeloo');
+	NEELOO
+	
+	Note: 
+	php -a and php -S here,-a and -S are called as command line argument.
+	On supplying these arguments the program starts executing, in the same given environment
+	
+	How to see list of all arguments
+	*****************************
+	cmd:> php -help
+	php -a:interactive mode
+	php -r:execute the code as readline
+	php -v:display the current version of php
+	php --version:display the current version of php
+	php -S: run the inbuilt cli server of php <@v php 5.6.2>
+	php -h: run the helps
+	php -m: loads all the important modules initialized by php.ini
+	
+	wap in php to run a php code as readline
+	*************************************
+	we will use php -r command to run the code in readline
+	cmd:>php -r "echo 'My name is neeloo';"
+	My name is neeloo
+	
+2. php web mode
+	1. php cli server :php -S <url>:<any-port-no>
+	2. Using laragon web interface
+We have only two types of program in a programming language:
+1. with input: addition of two number with input
+2. without input: hello world
+
+How to create our first input program in web-interface
+*****************************************************
+Input fields: HTML form
+	1.Create a Html form
+	2.Add any number of field you require
+	3.Add a submit button
+	4.Add form tag,with action and method="GET" or method="POST"
+	5.Add the server-side page url which is going to handle the request at server-side.
+	6.Fill the form and hit on submit button
+	7.you will get a Not Found 404 error, because resource does not exist.
+	8.Create a server-side page,which can handle client request and 
+	process data and give the response.
+	9.Use the superGlobal variable of php to accept the request using
+	$_REQUEST to handle the form fields.
+	10.Since $_REQUEST is a Array,it has a key as name field attribute in Html form
+	and use echo statement to display the output and after words comment it.
+	11.Note that add id and name attribute on html forms to handle each form controls 
+	on server side.
+	Concept:This concept is valid for all language jsp,python,asp.net and php also
+	id----> for javascript or client side
+	name---> for server side
+	
+	task:
+	1.wap in php to accept name and display on another page
+	2.wap in php to take three numbers as input and display result of sum
+	3.wap in php to make calculator to find +,-,*,/
+	***4.wap in php to take info of user,name,email,password,mobile and display his information
+	in next page
+	5.wap in php to take p,r,t find side
+	6.wap in php to accept lenght,breadth from user and calculate area of rectangle,perimeter
+	7.wap in php to take radius as input and find area,circumference of a circle
+	8.wap in php to find remainder of a given 2 numbers when a/b using % operator
+	***9.wap in php to find remainder of a given 2 numbers when a/b without using % operator
+	****10.wap in php to take a and b as input and use -,/,* operator to find sum but you are not 
+	allowed to use + operator and condition
+		1. a>b always
+		2. a>0 always +ve
+		3. b>0 always +ve
+	***11.wap in php to take input of 5 subject of student,enter his marks and show the marks 
+of each subject with overall %	
+
+
+
+
+
+
+
+
+
+	

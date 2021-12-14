@@ -1,0 +1,59 @@
+url syntax:
+[protocol-name] ://<sub domain>/<domain>/<host>:<port>/<resource-url>
+http://test.seeksolution.in:80/web-app/login
+http://test.seeksolution.in:/web-app/login
+
+test:sub domain
+.in host
+:443 port
+web-app/login  --resource-url//uri segment
+end point
+
+http://facebook.com:80/
+request responding
+https://facebook.com:443/
+
+uri segment: each part seperated by / single slash, is called as uri-segement.
+after port : it is basically path to resource
+after protocol and before endpoint is called as Domain name.
+Every Domain name may have a sub-domain or not but will have a port,
+and every domain will have an IP address, since one can not learn or remember the IP address
+so, we provide a alias name ,this alias name is called as domain name and this domain name 
+has to be registered(mapped) with the  IP and using DNS(domain name server)
+
+question :
+identify protocol,port,uri-segement,domain-host,domain name,sub-domain,resource,extension,
+mimetype,Ip address,loopback address,local address,foreign address
+url:---
+http://dev.localhost/myproject/admin/p1.php
+
+protocol:  http
+port:  80
+uri-segement:  dev.localhost/myproject/admin/p1.php
+domain-host:  .php
+domain Name: dev.localhost
+sub domain: dev
+resource-address: myproject/admin/p1.php
+end point: myproject/admin/p1.php
+resource-path: myproject/admin/p1
+resource:p1.php
+extension: .php
+mimetype:.php
+IP address:127.0.0.1 
+loopback address:127.0.0.1
+local address:127.0.0.1 or LAPTOP-CD445O62    
+foreign address: [::1]
+
+type of file in browser: rendorable non-rendorable
+
+What is mime type?
+ Multipurpose Internet Mail Extensions
+ 
+mozilla mdn
+
+
+
+
+
+
+

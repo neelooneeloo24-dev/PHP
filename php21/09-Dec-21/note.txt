@@ -1,0 +1,69 @@
+MIME : multipurpose internet mail extensions
+
+How browser handle a file loaded in browser?
+1. browser checks for the mime type supported by browser meta catalog(dictionary)
+2. If it exists,then it will be loaded in the memory. Else it will be thrown as a download
+(this is the reason why browser does not give memory allocation to the non-supported file 
+and will be send to download.)
+This happens because, the browser can support two types of file--
+1.Renderable(presentation):
+2.Non-renderable()
+ 
+index.html   renderable
+p1.txt		 non-renderable
+style.css	non-renderable
+script.js	non-renderable
+p1.png 		renderable
+inde.exe		DOWNLOAD(mime type not supported)
+p1.jpg		renderable
+p1.doc			DOWNLOAD(mime type not supported)
+p1.docx			DOWNLOAD(mime type not supported)
+p1.xls			DOWNLOAD(mime type not supported)
+p1.php		non-renderable
+
+1. mime type supported --> load in memory
+a. renderable: the file which follow SGML standard or WHATWG standard.
+SGML: support HTML4
+WHATWG: support HTML5
+file:///C:/Users/NEELOO/Desktop/APP2021/php/08-Dec-21/index.html
+
+b. non-renderable: the file which does not follow SGML standard or WHATWG standard will be loaded
+as plain text(as raw file).
+
+file:///C:/Users/NEELOO/Desktop/APP2021/php/08-Dec-21/index.php
+
+ In that case we need to add Handlers to handle such type of file.
+HOW to run any PHP file in the browser?
+1. Add handler php8---->software>php interpreter-->activate--->plain text-->input parse or compile
+or decode-->outside>view port
+
+c:/window/system32/drivers/etc/host
+file:///C:/laragon/www/p1.php
+http://localhost:786/p1.php
+
+2. mime type not supported--->download, not loaded in memory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cat.log > json file javascript object notation
+
+
+
+
+
+
+
+

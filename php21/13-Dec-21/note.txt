@@ -1,0 +1,101 @@
+Note: 
+client side:Front end language(Html,css,css3,Less,SASS,Vanillajs(javascript),Jquery,Bootstrap,tailwing
+css,SVG,images,fonts,icons,themes,widgets,layouts,other Framework of Js(Reactjs,angularjs,BackBoneJs,
+EmberJs,nextJs,Redux.....,vueJs))
+
+Server side:Backend language including databse:
+(C++,go,Rust,C,php,python,java(jsp,servelet),asp.Net,Ruby,R,Node.js,ExpressJs,Scala,perl...)
+Database:
+SQL based database(structured database)
+	1.Oracle
+	2.MYSQL
+	3.SQlite
+	4.mariadb
+	5.MSSql
+	
+	unstructured database:no-sql database
+		1.mongoDB
+		2.DynamoDb
+		3.couchDb
+		4.candendra
+		5.redis
+		6.Postgrelsql
+		7.Firebase
+		8.S3(simple storage service) Bucket(AWS)
+		
+Using client side validation in PHP
+***********************************
+What is validation and types of validation?
+1. validating or restricting the user from entering the invalid data in the form field is called
+as validation.
+
+Most comfuesing question:
+What is difference b/w validation,authentication, authorisation?
+
+	1.validation: it will prevent server from providing invalid or uploading illegal files format in the 
+	database or server by the user.
+	eg.:Enter the name: 637388229 invalid process validation
+	uplaod pic :upload Bahubali.mp4 2gb only 20kb file allowed---invalid file----validation
+	Incase of validation there in no involvement of database
+	validation:javascript: client side
+	validation:Php: server side
+	Both side validation should be done because there may be a chance that user may have blocked his
+	javascript or disabled the javascript.
+	
+	Q1:Making an emailId unique for each Registration is example?
+	ans: authentication ,because user email will be checked from database.
+	Note: Incase of validation either from client side or server side only logic be involed not database.
+	
+	But checking the format of email is validation.
+	neeloo@gmail.com---->format match---->pattern---->pattern matching or regular exepression.
+	
+	
+	2.Authentication:
+		Cross checking the identity of existing user from database is called as authentication.
+		Such type of feature is used in case of Login,email Verification,Unique email,forget password,
+		google login,fb login, github login, linkedIn login...
+		OTP verification,OTP login.
+		Q:captcha is a which type of validation?
+			(completely automated public turing test to tell computers and human apart)
+			It is always server side because it involve session storage which is processed at 
+			server side only--->session data that is already encrypted.
+	
+	3.Authorisation:
+		It refers to permission given to authenticated user.Once the user is valid then it may 
+		have few permission or not have any permission, this concept is authorization.
+		
+		ex:
+		I can register in Panel--->login in there(authenticated)---->loginned---->I can not see any 
+		course (authorised for any course). 
+		
+		eg.:trial user(non-authorased),premieum user(authorised)
+			
+			Types of authorisation:
+			1. no authorisation(user--->role)
+			2.Fully authorisation (super admin--->role)
+			3.Partially authorisation (admin--->role)
+			Roles & permission is kind of authorisation
+			
+			eg:school erp(enterprise resource planning)
+			1. teacher
+				|add attendance
+				|view attendance
+			2. student
+				|view attendance
+			here student can not add attendance because student is not authorised for,
+			adding attendance.
+
+	Working with php cli
+	*********************
+		1. hello world: without input
+		2.addition of two number:with input
+		
+		
+		
+	
+
+
+
+
+
+

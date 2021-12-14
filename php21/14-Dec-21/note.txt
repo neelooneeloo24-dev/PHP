@@ -1,0 +1,273 @@
+In order to take input on console window or cli mode, we need a scanner.php file where we define
+input () function
+
+Postmortem of Input() function inside scanner.php
+**********************************************
+in order to understand this,how input function works following concepts are required---
+Explaination of above concepts:
+-----------------------
+1. use of echo statement:
+WE CAN ECHO STATEment fo rprinting the string value or any variable value or any constant literal.
+php>echo 'hello world';
+hello world
+	php>echo "hello world";
+	hello world
+	php>echo 10;//constant literal
+	10
+	php> $x=10;
+	php>echo $x;
+	10
+	php>echo true;//constant literal
+	1
+	php>echo false;//constant literal
+	php>echo ("%d",false);
+	0
+	php>array[10,20,30];
+	array to string conversion error
+	php>echo '';
+	''
+	echo json_encode('');
+	""
+	echo json_encode('false');
+	false
+	php > echo json_encode(PHP_EOL);
+"\r\n"
+php >  
+
+php > echo (PHP_EOL);
+
+php >  
+
+Ques1: $x=(false=='');
+a: 1// true 
+b: 0
+c: 
+d:none of these
+expalanation: == compare content
+php > echo '';
+php > echo false;
+php > $x=(false=='');
+php > echo $x;
+1
+php >  
+
+Ques2: $x=(false==='');
+a: 1
+b: 0
+c:    //valid
+d:none of these
+explanation: 
+php > $x=(false==='');
+php > echo $x;
+php >  
+php>echo (int)$x;
+0
+
+php>echo null;
+php> echo getType($x);
+boolean
+
+*********************************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$x=(false==='');
+php > echo $x;
+php > var dump(echo(10));
+
+Parse error: syntax error, unexpected 'var' (T_VAR), expecting end of file in php shell code on line 1
+php > echo 10+'';
+
+Warning: A non-numeric value encountered in php shell code on line 1
+10
+php > echo 10.'';
+
+Parse error: syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in php shell code on line 1
+php > echo 10,'';
+10
+php > echo (int)'';
+0
+php > echo 10+'neeloo';
+
+Warning: A non-numeric value encountered in php shell code on line 1
+10
+php > echo 10,'neeloo';
+10neeloo
+php > echo 10.'neeloo';
+
+Parse error: syntax error, unexpected ''neeloo'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in php shell code on line 1
+php > echo 10+'10';
+20
+php > echo 'Dolly'.'Sheikh';
+DollySheikh
+php > echo 10+0;
+10
+php > echo 10+'';
+
+Warning: A non-numeric value encountered in php shell code on line 1
+10
+php > echo 10+'10';
+20
+php > echo 10+'a';
+
+Warning: A non-numeric value encountered in php shell code on line 1
+10
+php > echo 10.10;
+10.1
+php > echo 10.4566;
+10.4566
+php > echo [10,20,30];
+
+Notice: Array to string conversion in php shell code on line 1
+Array
+php > echo '[10,20,30]';
+[10,20,30]
+php >
+php > echo join([10,20,30]);
+102030
+php >  
+php > echo implode('',[10,20,30]);
+102030
+
+php >    
+
+php > echo null;//constant literal
+php >
+php > echo json_encode(null);
+null
+php>echo json_encode($x);
+false
+php > echo null==false;
+1
+php > echo null===false;
+php >echo (0=='');
+1
+php>echo 0==null;
+1
+php>echo null==0;
+1
+php>echo (0==false);
+1
+php>echo int(null);
+0
+php>echo null===null;
+1
+php>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+**********************************************
+Note: echo will evalute the expression as a string.
+Note:null==0==false==''==true==1
+
+lower conversion:int
+upper conversion:string
+
+	
+2. driver protocol[protocol]://
+
+3. concept of user-defined function
+4. returning from a function
+5. using default argument in a function
+6. file-pointer and file handling
+7. input output buffer or I/O stream
+8. using trim() function
+
+Ques.-Do  php support inbuilt console input function?
+Ans. Yes, readline() is predefined function used to take input.
+
+ Wap in php to perform addition of two numbers using readline method in cli
+ **************************************************************************
+ php interactive mode
+ php interactive mode
+ $name=readline();
+ echo $name;
+ 
+ 
+C:\laragon\www\APP2021\cli>php -a
+Interactive shell
+
+php > $name=readline();
+neeloo
+php > echo $name;
+neeloo
+php >  
+
+
+php > $name = readline('Enter the name: ');
+Enter the name: Neeloo
+php > echo $name;
+Neeloo
+php >  
+
+
+php > $a=readline('Enter first number: ');
+Enter first number: 20
+php > $b=readline('Enter second number: ');
+Enter second number: 30
+php > echo $a+$b;
+50
+php >  
+php>exit / ^c
+
+1 start notepad p3.php
+
+<?php
+//wap in php to find sum using readline
+
+$num1=readline('Enter first number: ');
+
+$num2=readline('Enter second number: ');
+
+$sum=$num1+$num2;
+
+printf("Sum is: %d",$sum);
+//echo "Sum is: ",$sum;
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

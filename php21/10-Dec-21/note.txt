@@ -1,0 +1,78 @@
+Getting started with PHP
+************************
+1. Goto your document root
+c:/laragon/www
+ launch cmd
+ 
+1. create folder
+mkdir APP2021
+
+2. goto inside APP2021 folder 
+cd APP2021
+
+3. How to create php file
+start notepad <file-namee.php>
+for eg.
+start notepad++ p1.php
+
+4. how to run program
+php <file-name.php> 
+
+1. there are two possible cases:
+	case1:you will get an output
+	case2:php not recognised as internal or external command
+	
+	you have written the code of php--->execute php interpreter----laragon
+	1. set environment variable
+	2. use the laragon terminal
+	
+	lemda is the repl of laragon.
+	window 10/11
+	C:\laragon\bin\php\php-7.4.19-Win32-vc15-x64
+	window 7
+	;C:\laragon\bin\php\php-7.4.19-Win32-vc15-x64
+	
+	How many ways we can run php programs--
+	1. Using laragon terminal
+	launch laragon terminal
+	goto file
+	type php filename.php
+	
+	output: terminal-->php cli mode
+	
+	2. Using cmd/gitbash...
+		goto file
+		type
+		php filename.php
+		output: terminal---->php cli mode
+	3. Using php inbuilt server/ cli(command line interface) server
+		goto file
+		type
+		php -S localhost:<port-no>
+		
+		goto browser
+		make a request
+		localhost:<port-no>
+		type:url:filename.php
+		url:
+		localhost:<port-no>/filename.php
+		output:--->web---->php cli web mode
+		
+		Note: in this case you need not to enable laragon server
+		in php version 5.6.2 php supports inbuilt server.
+		
+		how to close the running server
+		ctrl+c
+		current executing command close
+		http://localhost:786/APP2021/p1.php
+		
+	4.  
+
+
+
+
+
+
+
+
+
