@@ -1,0 +1,109 @@
+2. Driver protocol: 
+php supports list of driver protocol:
+These are also called as wrapper  or schema in the php
+	
+	1. file:// -Accessing local file system
+	2. http:// accessing HTTP(s) URLs
+	3. ftp:// accessing FTP (s) urls
+	4. php:// accessing various I/O streams
+	It can handle any type of input and output from any interface.
+	It can be terminal.it can be UI based or any third party(API) application programming interface.
+	
+	5. zlib:// compression streams
+	6. data:// data (rfc 2397)
+	7. glob:// find pathnames matching pattern
+	8. phar:// PHP archieve
+	9. ssh2:// secure shell 2
+	10. rar:// RAR
+	11. ogg:// audio streams
+	12. except:// process interaction streams
+	
+	in scanner.php we wrote code
+	$input=fgets(STDIN,1024)
+	STDIN: stdinput
+	STDERR:stderror
+	STDOUT:stdoutput
+	
+	the meaning of STDIN=php://input
+	the meaning of STDOUT:php://output (.56.3) or php://memory<(5.6.-)
+	
+	php://input
+	php://input is a read only stream that allows you to read raw data from the request body.
+	php://input is not available with enctype="multipart/form-data".
+	
+	php://output
+	php://output is a write-only stream that allows you to write to the output buffer mechanism
+	in the same way as print and echo.
+
+	note that, these are used for raw input only (Json Input) from client request.
+
+	What is use of fgets?
+	********************
+	fgtes() allows you to read the data from any input resource.It internally uses file pointer.
+	By default it can read 1024 characters at a run time from the input buffer.
+	
+	
+		1. fgets: terminal read 
+		fgets(STDIN,1024)
+		
+		2. fgets:file read
+
+	The fgets can read any no of characters from any file or resource before EOL(end of line)
+	
+	EOF integer Value =-1 in case of file
+	
+	Case 1:
+	fgets accepts two argument 
+		1. resource handler: this can be a wrapper,scheme, file pointer
+		2. buffer_size: no of memory blocks reserved for input characters stream.
+		IT works like a link list
+			where 0: address
+				  1: base data:header data:header node
+				  2. other nodes
+		If buffer_size not supplied :default 1024
+		If buffer_size ==0 : false
+		If buffer_size ==1 : false
+		If buffer_size >1  : character bit reserved in memory block headed(pointed by) by base node.
+		
+		
+	3. Concept of user-defined function:
+	  **********************************
+	 wap in php to show user-defined function:
+	 1. function <any-function>($args1,$args2,$args3....){
+		 // code statement
+		}
+		
+		function wish(){
+		
+			echo 'Hii! Good Morning...';
+		}
+		
+	WAP in php to add number using user-defined function:
+	
+	$no1=readline('Enter the no1: );
+	$no2=readline('Enter the no2: );
+		echo add($no1+$no2);
+		
+		function add($no1,$no2){
+			return $no1+$no2;
+		}
+		
+	4. Returning from a function :
+	using return keyword inside function the function should return a value we have already 
+	seen in add function
+	
+	5. Using default argument in a function:
+		if we want to make argument optional(can pass or cannot pass) in that case define a default value 
+		to the argument in function declaration and definition
+		function add($a,$b=0)
+		{
+		
+		}
+		$a:mendatory argument
+		$b:optional argument
+		
+	
+	
+		
+		
+	
